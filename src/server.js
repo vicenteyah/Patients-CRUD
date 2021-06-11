@@ -1,7 +1,7 @@
 require('dotenv').config()
 const app = require('./app')
 const db = require('./models')
-const {appConfig} = require('./config/app.config')
+const { appConfig } = require('./config')
 
 const init = async(appConfig) => {
     try{
