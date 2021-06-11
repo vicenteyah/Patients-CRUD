@@ -53,7 +53,7 @@ http://localhost:5000/v1/patient
 ```
 #### Response expected 201 created
 ```json
-[ 
+{ 
     "user":{
         "id": "959a76b2-1d2f-4761-9663-7a1f27dfe671",
         "completeName": "Eliud Vicente Yah Dzul",
@@ -64,8 +64,6 @@ http://localhost:5000/v1/patient
         "createdAt": "2021-06-11T01:21:30.000Z",
         "updatedAt": "2021-06-11T01:21:30.000Z"
     },
-    "message":{
-        "patient created successfully"
-    }
-]
+    "message":"patient created successfully"
+}
 ```
