@@ -119,3 +119,36 @@ http://localhost:5000/v1/tutor/info
 }
 ```
 + DELETE delete one patient http://localhost:5000/v1/patient/5f23589d-4206-4a57-b8c3-ed19bffd5f14
+# Table Schemas
+## Patient Model
+Field | Value Type | Table | Required |
+-- | -- | -- | -- 
+completeName| string | Patients | true | 
+age| integer | Patients | true | 
+gender | string | Patients | true |
+birthDate | date| Patients |true |
+hometown | string | Patients| true |
+## Tutor Model
+Field | Value Type | Table | Required |
+-- | -- | -- | -- 
+tutorName| string | Tutors | true | 
+tutorPhone| integer | Tutors | true | 
+## Hospital Model
+Field | Value Type | Table | Required |
+-- | -- | -- | -- 
+enrollmentDate| date | hospitals | true | 
+hospitalSource| string | hospitals | true | 
+
+# Information tables
+## hospital information
+Field | Value Type | Table | Foreign Key | Reference Model|
+-- | -- | -- | -- | --
+patientUUID| char(36) Binary | hospitalInfos | true | Patients |
+hospitalUUID| char(36) Binary | hospitalInfos | true | Hospitals |
+
+## Tutor information
+Field | Value Type | Table | Foreign Key | Reference Model |
+-- | -- | -- | -- | --
+patientUUID| char(36) Binary | tutorInfos | true | Patients |
+tutorUUID| char(36) Binary | tutorInfos | true | Tutors |
+
