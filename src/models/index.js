@@ -24,5 +24,9 @@ db.Sequelize = Sequelize
 db.sequelize = sequelize
 
 db.Patient = require('./patient')(sequelize,Sequelize)
+db.Tutor = require('./tutor')(sequelize,Sequelize)
+db.Hospital = require('./hospital')(sequelize,Sequelize)
+
+db.hospitalInfo = require('./hospitalInfo')(sequelize,Sequelize)
 
 module.exports = db
