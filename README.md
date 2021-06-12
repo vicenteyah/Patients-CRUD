@@ -58,3 +58,64 @@ http://localhost:5000/v1/patient
     "message":"patient created successfully"
 }
 ```
+# Post Hospital and tutor information example
++  You can use the test models to do this operation
+```zsh
+npm test
+```
++ after running the above command, use postman or another app to send http requests
+### path
+```
+http://localhost:5000/v1/hospital/info
+```
+### payload example
+```json
+{
+    "patientUUID":"1168f50b-f12b-4af7-ab69-b54d34545192 ",
+    "hospitalUUID": "40477fbf-c953-4746-a71c-8ba9c92667a4"
+}
+
+```
+### Response Expected code 200 example
+```json
+{
+    "uuid": "14158221-46ec-495b-8779-97726659bd5a",
+    "message": "hospital information created successfully"
+}
+```
+## The same steps for tutors model
+### path
+```
+http://localhost:5000/v1/tutor/info
+```
+### payload example
+```json
+{
+    "patientUUID":"1168f50b-f12b-4af7-ab69-b54d34545192 ",
+    "tutorUUID": "40477fbf-c953-4746-a71c-8ba9c92667a4"
+}
+
+```
+### Response Expected code 200 example
+```json
+{
+    "uuid": "14158221-46ec-495b-8779-97726659bd5a",
+    "message": "tutor information created successfully"
+}
+```
+# CRUD options available like put , delete ang get
+### you can use the same path corresponding to each operation
++ GET all Patients http://localhost:5000/v1/patients
++ GET one Patient http://localhost:5000/v1/patient/5f23589d-4206-4a57-b8c3-ed19bffd5f14
++ PUT update Patient data http://localhost:5000/v1/patient/5f23589d-4206-4a57-b8c3-ed19bffd5f14
+#### payload for PUT option
+```json
+{
+    "completeName": "Vicente Yah Dzul",
+    "age": 27,
+    "gender": "Masculino",
+    "birthDate": "1994-02-22",
+    "hometown": "Nuevo Laredo Tamaulipas"
+}
+```
++ DELETE delete one patient http://localhost:5000/v1/patient/5f23589d-4206-4a57-b8c3-ed19bffd5f14
