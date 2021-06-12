@@ -1,4 +1,4 @@
-const { dbConfig } = require('../config/db.config')
+const { dbConfig } = require('../config')
 const Sequelize = require('sequelize')
 const sequelize = new Sequelize(
     dbConfig.DB,
@@ -24,5 +24,9 @@ db.Sequelize = Sequelize
 db.sequelize = sequelize
 
 db.Patient = require('./patient')(sequelize,Sequelize)
+db.Tutor = require('./tutor')(sequelize,Sequelize)
+db.Hospital = require('./hospital')(sequelize,Sequelize)
+
+db.hospitalInfo = require('./hospitalInfo')(sequelize,Sequelize)
 
 module.exports = db
