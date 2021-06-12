@@ -44,8 +44,8 @@ const updatePatient =  async(req,res) =>{
 
 const deletePatient = async(req,res) => {
     try {
-        const patiendtDeleted = await Patient.destroy({ where: { id: req.params.id } })
-        if(patientDeleted != null) res.status(200).send({message:'patient deleted successfully',data:patiendtDeleted})
+        const patientDeleted = await Patient.destroy({ where: { id: req.params.id } })
+        if(patientDeleted != null) res.status(200).send({message:'patient deleted successfully'})
         res.status(404).send({message:'patient not found'})
     } catch (error) {
         console.log(error.message)
