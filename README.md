@@ -45,25 +45,16 @@ http://localhost:5000/v1/patient
 ```json
 {
     "completeName": "Eliud Vicente Yah Dzul",
-    "age": 25,
+    "age": 27,
     "gender": "Masculino",
     "birthDate": "1994-02-22",
     "hometown": "Nuevo Laredo Tamaulipas"
 }
 ```
-#### Response expected 201 created
+#### Response expected 201 created example
 ```json
 { 
-    "user":{
-        "id": "959a76b2-1d2f-4761-9663-7a1f27dfe671",
-        "completeName": "Eliud Vicente Yah Dzul",
-        "age": 25,
-        "gender": "Masculino",
-        "birthDate": "1994-02-22T07:13:44.000Z",
-        "hometown": "Nuevo Laredo Tamaulipas",
-        "createdAt": "2021-06-11T01:21:30.000Z",
-        "updatedAt": "2021-06-11T01:21:30.000Z"
-    },
+    "uuid":"959a76b2-1d2f-4761-9663-7a1f27dfe671",
     "message":"patient created successfully"
 }
 ```
