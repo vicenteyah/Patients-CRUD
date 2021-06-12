@@ -45,7 +45,7 @@ const updateTutor = async(req,res) => {
 const deleteTutor = async(req,res) => {
     try {
         const tutorDeleted = await Tutor.destroy({ where: { id: req.params.id } })
-       if(tutorDeleted != null) res.status(200).send({message:'tutor deleted successfully', data:tutorDeleted})
+       if(tutorDeleted != null) res.status(200).send({message:'tutor deleted successfully'})
        res.status(404).send({message:'tutor not found'})
     } catch (error) {
        console.log(error.message)
