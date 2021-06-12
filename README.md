@@ -121,23 +121,26 @@ http://localhost:5000/v1/tutor/info
 + DELETE delete one patient http://localhost:5000/v1/patient/5f23589d-4206-4a57-b8c3-ed19bffd5f14
 # Table Schemas
 ## Patient Model
-Field | Value Type | Table | Required |
--- | -- | -- | -- 
-completeName| string | Patients | true | 
-age| integer | Patients | true | 
-gender | string | Patients | true |
-birthDate | date| Patients |true |
-hometown | string | Patients| true |
+Field | Value Type | Table | Required | Primary Key|
+-- | -- | -- | -- | -- |
+uuid| char(36) Binary | Patients | true | true|
+completeName| string | Patients | true | false|
+age| integer | Patients | true | false|
+gender | string | Patients | true |false|
+birthDate | date| Patients |true |false|
+hometown | string | Patients| true |false|
 ## Tutor Model
-Field | Value Type | Table | Required |
--- | -- | -- | -- 
-tutorName| string | Tutors | true | 
-tutorPhone| integer | Tutors | true | 
+Field | Value Type | Table | Required | Primary Key|
+-- | -- | -- | -- | --
+uuid| char(36) Binary | Patients | true | true|
+tutorName| string | Tutors | true | false|
+tutorPhone| integer | Tutors | true | false|
 ## Hospital Model
-Field | Value Type | Table | Required |
--- | -- | -- | -- 
-enrollmentDate| date | hospitals | true | 
-hospitalSource| string | hospitals | true | 
+Field | Value Type | Table | Required |Primary Key|
+-- | -- | -- | -- | --
+uuid| char(36) Binary | Patients | true | true|
+enrollmentDate| date | hospitals | true | false|
+hospitalSource| string | hospitals | true |false| 
 
 # Information tables
 ## hospital information
